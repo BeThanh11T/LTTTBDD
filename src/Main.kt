@@ -1,9 +1,19 @@
+
+class Student(val name: String, val score: Int) {
+val passed: Boolean
+
+init {
+    println("Dang khoi tao $name")
+    passed = score >= 5
+}
+    val label = if (passed) "Dat" else "Truot"
+
+    init {
+        println("Sau khi tính label $label")
+    }
+}
+
 fun main() {
-    val hoTen = "Phạm Kim Thành"
-    val mssv = "23DH03026"
-    val lop = "KHMT K9"
-    println("Ho va ten: $hoTen")
-    println("MSSV: $mssv")
-    println("Lop: $lop")
-    println("Chuong trinh Kotlin dau tien cua toi!")
+val s = Student("Binh", 7)
+    println("Ket qua: ${s.label}")
 }
