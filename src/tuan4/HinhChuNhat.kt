@@ -3,14 +3,11 @@ class HinhChuNhat(val dai: Double, val rong: Double) {
     val chuVi:    Double get() = (dai + rong) * 2
     val laHinhVuong: Boolean get() = dai == rong
 
-    fun moTa(): String {
-        return "HCN $dai x $rong".replace(" ", "") +
-                ": S = $dienTich, P = $chuVi, hinh vuong: $laHinhVuong"
-    }
+    fun moTa(): String 
+        ="HCN $dai x $rong : S = $dienTich, P = $chuVi, hinh vuong: $laHinhVuong"
 }
 
-
 fun main() {
-    val h = HinhChuNhat(4.0, 2.5)
+    val h = HinhChuNhat(12.5, 3.0)
     println(h.moTa())
 }
